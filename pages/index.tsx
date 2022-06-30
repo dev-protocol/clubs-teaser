@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import Button from "../components/Button";
 import { ArrowRightIcon } from "@heroicons/react/solid";
+import JoinWaitlistBtn from "../components/JoinWaitlistBtn";
 
 interface FWPlaceholderImageProps {}
 
@@ -59,7 +60,6 @@ const Home: NextPage = () => {
                     Build your blockchain community in 1 minute
                   </div>
                 </div>
-                {/* <Button text="Join The Waitlist" onClick={join} /> */}
 
                 <div className="flex">
                   <a
@@ -166,41 +166,102 @@ const Home: NextPage = () => {
             </div>
           </section>
 
-          <section className="mb-32">
-            <h2 className="text-5xl font-semibold mb-8">Safe tokens.</h2>
-            <p className="font-medium mb-8">
+          {/**
+           * ===================
+           * Safe Tokens Section
+           * ===================
+           */}
+          <section className="mb-40">
+            <h2 className="text-6xl font-bold mb-7">Safe tokens.</h2>
+            <p className="font-medium mb-12">
               Built-in incentives by $DEV protects you. Clubs can build <br />{" "}
               an ecosystem while keeping your custom tokens safe.
             </p>
-            <FWPlaceholderImage />
-            <div className="text-center">
-              <Button text="Join The Waitlist" onClick={join} />
+
+            <div className="flex justify-center mb-16">
+              <div className="w-80 h-80 relative rounded-full overflow-clip">
+                <Image
+                  className=""
+                  src="/images/feat__youtuber.png"
+                  layout="fill"
+                  alt="YouTuber"
+                />
+              </div>
+              <div className="w-80 h-80 rounded-full bg-black p-16">
+                <div className="w-full h-full border border-2 border-white rotate-45"></div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <JoinWaitlistBtn joinUri={joinUri} />
             </div>
           </section>
 
-          <section className="mb-32">
-            <div className="text-right">
-              <h2 className="text-6xl mb-8">Make fans memberships.</h2>
-              <p className="text-2xl mb-8">
+          {/**
+           * ===================
+           * Fan Memberships Section
+           * ===================
+           */}
+          <section className="mb-40">
+            <div className="text-right mb-12">
+              <h2 className="text-6xl font-bold mb-7">
+                Make fans memberships.
+              </h2>
+              <p className="font-medium">
                 With creators and fans aligning incentives, Clubs <br /> turns
                 fans into passionate memberships.
               </p>
             </div>
-            <FWPlaceholderImage />
-            <div className="text-center">
-              <Button text="Join The Waitlist" onClick={join} />
+
+            <div className="flex justify-center mb-16">
+              <div className="bg-black w-2/3 p-4 rounded-full">
+                <div className="w-80 h-80 relative rounded-full overflow-clip float-right">
+                  <Image
+                    className=""
+                    src="/images/feat__happy.png"
+                    layout="fill"
+                    alt="Happiness from launching a DAO through Clubs"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <JoinWaitlistBtn joinUri={joinUri} />
             </div>
           </section>
 
-          <section className="mb-32">
-            <h2 className="text-6xl mb-8">Grow your own ecosystem.</h2>
-            <p className="text-2xl mb-8">
+          {/**
+           * ===================
+           * Grown your own ecosystem
+           * ===================
+           */}
+          <section className="mb-40">
+            <h2 className="text-6xl font-bold mb-7">
+              Grow your own ecosystem.
+            </h2>
+            <p className="font-medium mb-12">
               Clubs allows you to start using many pre-built features to <br />{" "}
               build the ecosystem for your community immediately.
             </p>
-            <FWPlaceholderImage />
-            <div className="text-center">
-              <Button text="Join The Waitlist" onClick={join} />
+
+            <div className="flex justify-center mb-16">
+              <div className="w-80 h-80 relative rounded-full overflow-clip">
+                <Image
+                  className=""
+                  src="/images/feat__smile.png"
+                  layout="fill"
+                  alt="A man smiling from launching his DAO on Clubs"
+                />
+              </div>
+              <div className="w-80 h-80 px-8 grid grid-cols-2 gap-4 items-end">
+                <div className="bg-black h-2/3 rounded-full"></div>
+                <div className="bg-black h-full rounded-full"></div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <JoinWaitlistBtn joinUri={joinUri} />
             </div>
           </section>
         </div>
