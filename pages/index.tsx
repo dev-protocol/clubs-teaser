@@ -1,25 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
-import Button from "../components/Button";
 import { ArrowRightIcon } from "@heroicons/react/solid";
 import JoinWaitlistBtn from "../components/JoinWaitlistBtn";
-
-interface FWPlaceholderImageProps {}
-
-const FWPlaceholderImage: React.FC<FWPlaceholderImageProps> = () => {
-  return (
-    <div className="w-full h-48 border border-violet-200 rounded border-4 flex items-center justify-center mb-12">
-      image
-    </div>
-  );
-};
 
 const Home: NextPage = () => {
   // TODO: link needs to be added
   const joinUri = "";
-  const join = () => {};
 
   return (
     <div>
@@ -31,7 +18,7 @@ const Home: NextPage = () => {
       </Head>
 
       <header>
-        <div className="container mx-auto max-w-screen-lg p-4">
+        <div className="container mx-auto p-4">
           <a
             className="text-accent float-right"
             href={joinUri}
@@ -44,7 +31,7 @@ const Home: NextPage = () => {
       </header>
 
       <main>
-        <div className="container mx-auto p-4 flex flex-col max-w-screen-lg">
+        <div className="container mx-auto p-4 max-w-screen-lg">
           {/**
            * ==============
            * Landing Section
@@ -264,11 +251,107 @@ const Home: NextPage = () => {
               <JoinWaitlistBtn joinUri={joinUri} />
             </div>
           </section>
+
+          <div className="flex justify-center mb-40">
+            <a
+              className="bg-accent text-white rounded-full w-1/2 text-center py-6"
+              href={joinUri}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Learn More About Clubs
+            </a>
+          </div>
         </div>
       </main>
 
       <footer>
-        <div className="container mx-auto p-4"></div>
+        <div className="container mx-auto p-4">
+          <div className="flex justify-between mb-8">
+            <a
+              className="text-accent font-medium"
+              href={joinUri}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Join the Waitlist
+            </a>
+            <div className="flex items-center">
+              <span className="mr-2">Clubs powered by </span>
+              <Image
+                src="/images/Polygon_Monochrome_White.png"
+                width={32}
+                height={32}
+                alt="Polygon Logo"
+              />
+              <span>polygon</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4 w-64 mb-8">
+            <div className="flex flex-col">
+              <span className="mb-2">Community</span>
+              <div className="mb-2">
+                <a
+                  href="https://discord.gg/VwJp4KM"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-500 "
+                >
+                  Discord
+                </a>
+              </div>
+              <div className="mb-2">
+                <a
+                  href="https://medium.com/devprtcl"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-500 "
+                >
+                  Medium
+                </a>
+              </div>
+
+              <div className="mb-2">
+                <a
+                  href="https://twitter.com/devprtcl"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-500"
+                >
+                  Twitter
+                </a>
+              </div>
+            </div>
+            <div className="flex flex-col">
+              <span className="mb-2">About</span>
+              <div className="mb-2">
+                <a
+                  href="https://devprotocol.xyz/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-500 "
+                >
+                  Dev Protocol
+                </a>
+              </div>
+              <div className="mb-2">
+                <a
+                  href="https://community.devprotocol.xyz/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-gray-500 "
+                >
+                  Forum
+                </a>
+              </div>
+            </div>
+          </div>
+          <span className="text-gray-400 text-xs pb-16">
+            Clubs build on Dev Protocol, the core of the Decentralized Creator
+            Economy, completely on-chain and 100% composable middleware
+            protocol.{" "}
+          </span>
+        </div>
       </footer>
     </div>
   );
