@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { ArrowRightIcon } from "@heroicons/react/solid";
+import { LightningBoltIcon } from "@heroicons/react/outline";
 import JoinWaitlistBtn from "../components/JoinWaitlistBtn";
 
 const Home: NextPage = () => {
@@ -41,7 +42,21 @@ const Home: NextPage = () => {
             <div className="z-10 grid grid-cols-1 md:grid-cols-2 gap-8 auto-cols-max">
               <div className="bg-white px-8 flex flex-col justify-between">
                 <div>
-                  <h2 className="text-4xl mb-2 font-medium">Clubs</h2>
+                  <div className="flex items-center mb-2 ">
+                    <h2 className="text-4xl font-medium mr-2">Clubs</h2>
+                    <LightningBoltIcon
+                      className="mr-2"
+                      width={24}
+                      height={24}
+                    />
+                    <Image
+                      src="/images/Polygon_Primary_Token.png"
+                      width={24}
+                      height={24}
+                      alt="Polygon logo"
+                    />
+                  </div>
+
                   <div className="mb-12">A WordPress-like DAO Builder</div>
                   <div className="mb-12 text-6xl font-bold">
                     Build your blockchain community in 1 minute
