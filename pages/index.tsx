@@ -13,6 +13,16 @@ const Home: NextPage = () => {
     return ((x % m) + m) % m;
   };
 
+  const placeholder = (i: number)=> 
+    <Image
+      className="rounded-xl h-40 w-auto"
+      key={`${i}`}
+      src={`/images/placeholder${mod(i, 6) + 1}.png`}
+      height="216"
+      width="384"
+      alt="Test"
+    />
+
   return (
     <div>
       <Head>
@@ -159,29 +169,20 @@ const Home: NextPage = () => {
          * ==================
          */}
         <section className="mb-32">
-          <div className="w-full flex overflow-x-scroll whitespace-nowrap no-scrollbar">
+          <div className="flex gap-8 max-w-full overflow-x-hidden whitespace-nowrap">
             {/**
              * this is used to repeat the images like placeholder1, placeholder2, etc
              * in a loop of 60
              */}
-            {[...Array(60)].map((_, i) => (
-              <div
-                className="float-left inline-block shrink-0 px-4"
-                style={{ width: "384" }}
-                key={`${i}`}
-              >
-                <Image
-                  className="rounded-xl"
-                  src={`/images/placeholder${mod(i, 6) + 1}.png`}
-                  height="216"
-                  width="384"
-                  alt="Test"
-                />
-              </div>
-            ))}
+            <div className='animate-[loop-a_180s_-90s_linear_infinite] flex gap-8 shrink-0 flex-nowrap'>
+              {[...Array(30)].map((_, i) => placeholder(i))}
+            </div>
+            <div className='animate-[loop-b_120s_linear_infinite] flex gap-8 shrink-0 flex-nowrap'>
+              {[...Array(30)].map((_, i) => placeholder(i))}
+            </div>
           </div>
           <div className="w-full text-center">
-            <h2 className="font-semibold text-3xl text-gray-500">
+            <h2 className="font-semibold mt-12 text-3xl text-gray-500">
               Theming for your community.
             </h2>
           </div>
@@ -199,8 +200,8 @@ const Home: NextPage = () => {
             ecosystem while keeping your custom tokens safe.
           </p>
 
-          <div className="flex justify-center mb-16">
-            <div className="w-80 h-80 relative rounded-full overflow-clip">
+          <div className="flex justify-center mb-16 w-full aspect-[2/1]">
+            <div className="h-full aspect-square relative rounded-full overflow-clip">
               <Image
                 className=""
                 src="/images/feat__youtuber.png"
@@ -208,8 +209,8 @@ const Home: NextPage = () => {
                 alt="YouTuber"
               />
             </div>
-            <div className="w-80 h-80 rounded-full bg-black p-16">
-              <div className="w-full h-full border border-2 border-white rotate-45"></div>
+            <div className="h-full flex justify-center items-center aspect-square rounded-full bg-black">
+              <div className="w-3/5 h-3/5 border border-2 border-white animate-[8s_ease-in-out_infinite_spin]"></div>
             </div>
           </div>
 
@@ -233,10 +234,10 @@ const Home: NextPage = () => {
           </div>
 
           <div className="flex justify-center mb-16">
-            <div className="bg-black w-2/3 p-4 rounded-full">
-              <div className="w-80 h-80 relative rounded-full overflow-clip float-right">
+            <div className="bg-black w-full aspect-[2/1] p-4 rounded-full box-content">
+              <div className="h-full aspect-square bg-gray-800 animate-[5s_alternate_ease-in-out_infinite_switch-a-leftToRight] rounded-full overflow-clip">
                 <Image
-                  className=""
+                  className="animate-[5s_alternate_ease-in-out_infinite_switch-a-fadeIn]"
                   src="/images/feat__happy.png"
                   layout="fill"
                   alt="Happiness from launching a DAO through Clubs"
@@ -262,8 +263,8 @@ const Home: NextPage = () => {
             build the ecosystem for your community immediately.
           </p>
 
-          <div className="flex justify-center mb-16">
-            <div className="w-80 h-80 relative rounded-full overflow-clip">
+          <div className="flex justify-center mb-16 w-full aspect-[2/1]">
+            <div className="h-full aspect-square relative rounded-full overflow-clip">
               <Image
                 className=""
                 src="/images/feat__smile.png"
@@ -271,9 +272,9 @@ const Home: NextPage = () => {
                 alt="A man smiling from launching his DAO on Clubs"
               />
             </div>
-            <div className="w-80 h-80 px-8 grid grid-cols-2 gap-4 items-end">
-              <div className="bg-black h-2/3 rounded-full"></div>
-              <div className="bg-black h-full rounded-full"></div>
+            <div className="h-full aspect-square px-8 grid grid-cols-2 gap-4 items-end">
+              <div className="bg-black h-2/3 rounded-full box-content animate-[8s_ease-in-out_infinite_stretch-a]"></div>
+              <div className="bg-black h-4/5 rounded-full box-content animate-[8s_1s_ease-in-out_infinite_stretch-b]"></div>
             </div>
           </div>
 
