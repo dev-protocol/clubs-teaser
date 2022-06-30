@@ -6,8 +6,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: stolzl, sans-serif;;
 }
 
 a {
@@ -17,4 +16,23 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.circle {
+  width: 28vw;
+  height: 28vw;
+  
+  border-top-left-radius: 28vw;
+  border-right: 0;
+  border-bottom: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.circle--blue {
+  background-color: #0061BB;
+}
+
+.circle--pink {
+  background-color: #FF98D0;
 }
