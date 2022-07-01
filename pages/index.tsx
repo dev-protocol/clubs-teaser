@@ -45,34 +45,37 @@ const Home: NextPage = () => {
         </div>
       </header>
 
-      <main>
+      <main className="overflow-x-clip">
         {/**
          * ==============
          * Landing Section
          * ==============
          */}
-        <section className="py-24 flex justify-center items-center mb-12 container mx-auto p-4">
-          <div className="z-10 grid grid-cols-1 md:grid-cols-2 gap-8 auto-cols-max">
-            <div className="bg-white px-8 flex flex-col justify-between">
-              <div>
-                <div className="flex items-center mb-2 ">
-                  <h2 className="text-4xl font-medium mr-2">Clubs</h2>
-                  <LightningBoltIcon className="mr-2" width={24} height={24} />
-                  <Image
-                    src="/images/Polygon_Primary_Token.png"
-                    width={24}
-                    height={24}
-                    alt="Polygon logo"
-                  />
-                </div>
-
-                <div className="mb-12">A WordPress-like DAO Builder</div>
-                <div className="mb-12 text-6xl font-bold">
-                  Build your blockchain community in 1 minute
-                </div>
+        <section className="py-24 mb-12 container mx-auto p-4">
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr] gap-8 auto-cols-max">
+            <div className="w-full max-w-xl mx-auto">
+              <div className="flex items-center mb-2 ">
+                <h2 className="text-4xl font-medium mr-2">Clubs</h2>
+                <LightningBoltIcon className="mr-2" width={24} height={24} />
+                <Image
+                  src="/images/Polygon_Primary_Token.png"
+                  width={24}
+                  height={24}
+                  alt="Polygon logo"
+                />
+              </div>
+              <p className="mb-12">A WordPress-like DAO Builder</p>
+            </div>
+            <i></i>
+            <div className="flex flex-col justify-between max-w-xl mx-auto">
+              <div className="relative">
+                <i className="circle circle--pink w-[60%] lg:w-[80%] aspect-square absolute top-0 -left-[20%] lg:-left-[calc(80%+10%)]"></i>
+                <p className="mb-12 relative break-normal text-6xl lg:text-8xl font-bold">
+                  Build your Web3 community in 1 minute
+                </p>
               </div>
 
-              <div className="flex">
+              <div className="flex relative">
                 <a
                   href={joinUri}
                   target="_blank"
@@ -105,61 +108,50 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
-            <div className="h-[33rem] grid grid-cols-1 gap-4 relative">
-              <div className="flex justify-start md:justify-center">
-                <div className="relative h-64 w-96">
-                  <div className="absolute left-0 h-64 w-64 border-black border rounded">
-                    <Image
-                      className="rounded"
-                      src="/images/hero__mock-1.png"
-                      alt="Clubs Light Teaser"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                  <div className="absolute left-32 h-64 w-64">
-                    <Image
-                      className="rounded-full"
-                      src="/images/hero__designer.png"
-                      alt="Clubs Light Teaser"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
+            <div className="grid gap-8">
+              <div className="flex w-full aspect-[1.5/1]">
+                <div className="h-full aspect-square border-black border rounded">
+                  <Image
+                    className="rounded h-full"
+                    src="/images/hero__mock-1.png"
+                    width={1043}
+                    height={1043}
+                    alt="Clubs Light Teaser"
+                  />
+                </div>
+                <div className="relative -ml-[calc(100%/3)] h-full aspect-square">
+                  <Image
+                    className="rounded-full"
+                    src="/images/hero__designer.png"
+                    alt="Clubs Light Teaser"
+                    layout="fill"
+                    objectFit="contain"
+                  />
                 </div>
               </div>
 
-              <div className="flex justify-start md:justify-center z-10 ">
-                <div className="relative h-64 w-96">
-                  <div className="absolute left-0 h-64 w-64 rounded">
-                    <Image
-                      className="rounded"
-                      src="/images/hero__mock-2.png"
-                      alt="Clubs Dark Teaser"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-
-                  <div className="absolute left-32 h-64 w-64">
-                    <Image
-                      className="rounded-full"
-                      src="/images/hero__gamer.png"
-                      alt="Clubs Light Teaser"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
+              <div className="relative flex w-full aspect-[1.5/1]">
+                <div className="absolute circle circle--blue h-full aspect-square bottom-0 -right-1/3"></div>
+                <div className="h-full aspect-square border-black border rounded">
+                  <Image
+                    className="rounded h-full"
+                    src="/images/hero__mock-2.png"
+                    width={1043}
+                    height={1043}
+                    alt="Clubs Dark Teaser"
+                  />
                 </div>
-              </div>
-              <div className="z-0 absolute bottom-0 left-[18rem] flex items-center justify-center">
-                <div className="circle circle--blue"></div>
+                <div className="relative -ml-[calc(100%/3)] h-full aspect-square">
+                  <Image
+                    className="rounded-full"
+                    src="/images/hero__gamer.png"
+                    alt="Clubs Dark Teaser"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="z-0 absolute top-56 -left-24 flex items-center justify-center">
-            <div className="circle circle--pink"></div>
           </div>
         </section>
 
@@ -194,9 +186,9 @@ const Home: NextPage = () => {
          * ===================
          */}
         <section className="mb-40 container mx-auto p-4">
-          <h2 className="text-6xl font-bold mb-7">Safe tokens.</h2>
+          <h2 className="text-5xl md:text-7xl font-bold mb-7">Safe NFTs.</h2>
           <p className="font-medium mb-12">
-            Built-in incentives by $DEV protects you. Clubs can build <br /> an
+            Built-in incentives by $DEV protects you. Clubs can build an
             ecosystem while keeping your custom tokens safe.
           </p>
 
@@ -226,9 +218,9 @@ const Home: NextPage = () => {
          */}
         <section className="mb-40 container mx-auto p-4">
           <div className="text-right mb-12">
-            <h2 className="text-6xl font-bold mb-7">Make fans memberships.</h2>
+            <h2 className="text-5xl md:text-7xl font-bold mb-7">Make fans memberships.</h2>
             <p className="font-medium">
-              With creators and fans aligning incentives, Clubs <br /> turns
+              With creators and fans aligning incentives, Clubs turns
               fans into passionate memberships.
             </p>
           </div>
@@ -257,10 +249,9 @@ const Home: NextPage = () => {
          * ===================
          */}
         <section className="mb-40 container mx-auto p-4">
-          <h2 className="text-6xl font-bold mb-7">Grow your own ecosystem.</h2>
+          <h2 className="text-5xl md:text-7xl font-bold mb-7">Grow your own ecosystem.</h2>
           <p className="font-medium mb-12">
-            Clubs allows you to start using many pre-built features to <br />{" "}
-            build the ecosystem for your community immediately.
+            Clubs allows you to start using many pre-built features to build the ecosystem for your community immediately.
           </p>
 
           <div className="flex justify-center mb-16 w-full aspect-[2/1]">
@@ -379,7 +370,7 @@ const Home: NextPage = () => {
           <span className="text-gray-400 text-xs pb-16">
             Clubs build on Dev Protocol, the core of the Decentralized Creator
             Economy, completely on-chain and 100% composable middleware
-            protocol.{" "}
+            protocol.
           </span>
         </div>
       </footer>
