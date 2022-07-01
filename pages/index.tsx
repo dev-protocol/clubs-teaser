@@ -28,7 +28,27 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>Clubs</title>
+        <meta name="viewport" content="width=device-width" />
         <meta name="description" content="The WordPress of DAO Builders" />
+        <meta name="description" content="The WordPress of DAO Builders" />
+        <meta property="og:title" content="Clubs" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://clubs.devprotocol.xyz" />
+        <meta property="og:image" content="/images/og.png" />
+        <meta
+          property="og:description"
+          content="The WordPress of DAO Builders"
+        />
+        <meta property="og:site_name" content="Clubs" />
+        <meta name="twitter:site" content="@devprtcl" />
+        <meta name="twitter:creator" content="@devprtcl" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Clubs" />
+        <meta
+          name="twitter:description"
+          content="The WordPress of DAO Builders"
+        />
+        <meta name="twitter:image" content="/images/og.png" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/uml2uca.css" />
       </Head>
@@ -65,7 +85,7 @@ const Home: NextPage = () => {
                   alt="Polygon logo"
                 />
               </div>
-              <p className="mb-12">A WordPress-like DAO Builder</p>
+              <p className="mb-12">The WordPress of DAO Builders</p>
             </div>
             <i></i>
             <div className="flex flex-col justify-between max-w-xl mx-auto">
@@ -283,7 +303,7 @@ const Home: NextPage = () => {
         <div className="flex justify-center mb-40">
           <a
             className="bg-accent text-white rounded-full w-1/2 text-center py-6"
-            href={joinUri}
+            href="https://medium.com/devprtcl/upcoming-clubs-8bd5c84bb53a"
             target="_blank"
             rel="noreferrer"
           >
