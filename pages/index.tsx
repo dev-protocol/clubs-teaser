@@ -47,7 +47,10 @@ const Home: NextPage = () => {
           name="twitter:description"
           content="The WordPress of DAO Builders"
         />
-        <meta name="twitter:image" content="/images/og.png" />
+        <meta
+          name="twitter:image"
+          content="https://clubs.devprotocol.xyz/images/og.png"
+        />
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://use.typekit.net/uml2uca.css" />
       </Head>
@@ -208,8 +211,8 @@ const Home: NextPage = () => {
         <section className="mb-40 container mx-auto p-4">
           <h2 className="text-5xl md:text-7xl font-bold mb-7">Safe NFTs.</h2>
           <p className="font-medium mb-12">
-            Built-in incentives by $DEV protect you. Clubs can build an
-            ecosystem while keeping your custom tokens safe.
+            The most advanced blockchain technology protects you. Clubs can
+            build an ecosystem while keeping your tokens safe.
           </p>
 
           <div className="flex justify-center mb-16 w-full aspect-[2/1]">
