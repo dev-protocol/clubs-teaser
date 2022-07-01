@@ -6,8 +6,7 @@ import { LightningBoltIcon } from '@heroicons/react/outline'
 import JoinWaitlistBtn from '../components/JoinWaitlistBtn'
 
 const Home: NextPage = () => {
-  // TODO: link needs to be added
-  const joinUri = ''
+  const joinUri = 'https://airtable.com/shrgCzrbzYj5A16Lu'
 
   const mod = (x: number, m: number) => {
     return ((x % m) + m) % m
@@ -209,7 +208,7 @@ const Home: NextPage = () => {
         <section className="mb-40 container mx-auto p-4">
           <h2 className="text-5xl md:text-7xl font-bold mb-7">Safe NFTs.</h2>
           <p className="font-medium mb-12">
-            Built-in incentives by $DEV protects you. Clubs can build an
+            Built-in incentives by $DEV protect you. Clubs can build an
             ecosystem while keeping your custom tokens safe.
           </p>
 
