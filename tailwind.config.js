@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        accent: "#007FF3",
+        accent: '#007FF3',
       },
       keyframes: {
         spin: {
@@ -39,22 +39,22 @@ module.exports = {
         },
         'loop-a': {
           '0%': {
-            transform: 'translateX(100%)'
+            transform: 'translateX(100%)',
           },
           to: {
-            transform: 'translateX(-100%)'
-          }
+            transform: 'translateX(-100%)',
+          },
         },
         'loop-b': {
           '0%': {
-            transform: 'translateX(0)'
+            transform: 'translateX(0)',
           },
           to: {
-            transform: 'translateX(-200%)'
-          }
-        }
-      }
+            transform: 'translateX(-200%)',
+          },
+        },
+      },
     },
   },
   plugins: [],
-};
+}

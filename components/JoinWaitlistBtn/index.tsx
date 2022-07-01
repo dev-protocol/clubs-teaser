@@ -1,8 +1,8 @@
-import React from "react";
-import { ArrowRightIcon } from "@heroicons/react/solid";
+import React from 'react'
+import { ArrowRightIcon } from '@heroicons/react/solid'
 
 interface JoinWaitlistBtnProps {
-  joinUri: string;
+  joinUri: string
 }
 
 const JoinWaitlistBtn: React.FC<JoinWaitlistBtnProps> = ({ joinUri }) => {
@@ -18,7 +18,7 @@ const JoinWaitlistBtn: React.FC<JoinWaitlistBtnProps> = ({ joinUri }) => {
       </div>
       <span className="pl-4 font-medium">Join the waitlist</span>
     </a>
-  );
-};
+  )
+}
 
-export default JoinWaitlistBtn;
+export default JoinWaitlistBtn

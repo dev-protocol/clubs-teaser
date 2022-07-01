@@ -1,19 +1,19 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import { ArrowRightIcon } from "@heroicons/react/solid";
-import { LightningBoltIcon } from "@heroicons/react/outline";
-import JoinWaitlistBtn from "../components/JoinWaitlistBtn";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import Image from 'next/image'
+import { ArrowRightIcon } from '@heroicons/react/solid'
+import { LightningBoltIcon } from '@heroicons/react/outline'
+import JoinWaitlistBtn from '../components/JoinWaitlistBtn'
 
 const Home: NextPage = () => {
   // TODO: link needs to be added
-  const joinUri = "";
+  const joinUri = ''
 
   const mod = (x: number, m: number) => {
-    return ((x % m) + m) % m;
-  };
+    return ((x % m) + m) % m
+  }
 
-  const placeholder = (i: number)=> 
+  const placeholder = (i: number) => (
     <Image
       className="rounded-xl h-40 w-auto"
       key={`${i}`}
@@ -22,6 +22,7 @@ const Home: NextPage = () => {
       width="384"
       alt="Test"
     />
+  )
 
   return (
     <div>
@@ -166,10 +167,10 @@ const Home: NextPage = () => {
              * this is used to repeat the images like placeholder1, placeholder2, etc
              * in a loop of 60
              */}
-            <div className='animate-[loop-a_180s_-90s_linear_infinite] flex gap-8 shrink-0 flex-nowrap'>
+            <div className="animate-[loop-a_180s_-90s_linear_infinite] flex gap-8 shrink-0 flex-nowrap">
               {[...Array(30)].map((_, i) => placeholder(i))}
             </div>
-            <div className='animate-[loop-b_120s_linear_infinite] flex gap-8 shrink-0 flex-nowrap'>
+            <div className="animate-[loop-b_120s_linear_infinite] flex gap-8 shrink-0 flex-nowrap">
               {[...Array(30)].map((_, i) => placeholder(i))}
             </div>
           </div>
@@ -218,10 +219,12 @@ const Home: NextPage = () => {
          */}
         <section className="mb-40 container mx-auto p-4">
           <div className="text-right mb-12">
-            <h2 className="text-5xl md:text-7xl font-bold mb-7">Make fans memberships.</h2>
+            <h2 className="text-5xl md:text-7xl font-bold mb-7">
+              Make fans memberships.
+            </h2>
             <p className="font-medium">
-              With creators and fans aligning incentives, Clubs turns
-              fans into passionate memberships.
+              With creators and fans aligning incentives, Clubs turns fans into
+              passionate memberships.
             </p>
           </div>
 
@@ -249,9 +252,12 @@ const Home: NextPage = () => {
          * ===================
          */}
         <section className="mb-40 container mx-auto p-4">
-          <h2 className="text-5xl md:text-7xl font-bold mb-7">Grow your own ecosystem.</h2>
+          <h2 className="text-5xl md:text-7xl font-bold mb-7">
+            Grow your own ecosystem.
+          </h2>
           <p className="font-medium mb-12">
-            Clubs allows you to start using many pre-built features to build the ecosystem for your community immediately.
+            Clubs allows you to start using many pre-built features to build the
+            ecosystem for your community immediately.
           </p>
 
           <div className="flex justify-center mb-16 w-full aspect-[2/1]">
@@ -375,7 +381,7 @@ const Home: NextPage = () => {
         </div>
       </footer>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
