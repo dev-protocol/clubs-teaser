@@ -33,7 +33,10 @@ const Home: NextPage = () => {
         <meta property="og:title" content="Clubs" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://clubs.devprotocol.xyz" />
-        <meta property="og:image" content="/images/og.png" />
+        <meta
+          property="og:image"
+          content="https://clubs.devprotocol.xyz/images/og.png"
+        />
         <meta
           property="og:description"
           content="The WordPress of DAO Builders"
